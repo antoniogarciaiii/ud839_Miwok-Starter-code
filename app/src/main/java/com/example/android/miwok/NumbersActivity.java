@@ -35,24 +35,13 @@ public class NumbersActivity extends AppCompatActivity {
 
         int index = 0;
 
-        //create a textView, set contents of 0th index of words ArrayList to it, then add it to rootView
-        TextView wordView = new TextView(this);
-        wordView.setText(words.get(index));
-        rootView.addView(wordView);
+        while (index < words.size()) {
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(index));
+            rootView.addView(wordView);
 
-        index += 1;
-
-        //create a textView, set contents of 1st index of words ArrayList to it, then add it to rootView
-        TextView wordView2 = new TextView(this);
-        wordView2.setText(words.get(index));
-        rootView.addView(wordView2);
-
-        index += 1;
-
-        //create a textView, set contents of 3rd index of words ArrayList to it, then add it to rootView
-        TextView wordView3 = new TextView(this);
-        wordView3.setText(words.get(index));
-        rootView.addView(wordView3);
+            index++;
+        }
 
     }
 }
